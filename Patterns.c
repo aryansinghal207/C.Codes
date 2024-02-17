@@ -36,15 +36,15 @@
 // ### Star Triangle... 
 // #include<stdio.h>
 // int main(){
-//     int a;
-//     printf("Enter The number of lines : ");
-//     scanf("%d",&a);
-//     for(int i=1;i<=a;i++){
-//         for(int j=1;j<=i;j++){
-//             printf("*");
-//         }
-//         printf("\n");
-//     }
+    // int a;
+    // printf("Enter The number of lines : ");
+    // scanf("%d",&a);
+    // for(int i=1;i<=a;i++){
+    //     for(int j=1;j<=i;j++){
+    //         printf("*");
+    //     }
+    //     printf("\n");
+    // }
 //     return 0;
 // }
 
@@ -164,17 +164,50 @@
 //     return 0;
 // }
 
-// ###Print the following pattern
-#include<stdio.h> 
+// ###Print the star plus pattern
+// #include<stdio.h> 
+// int main(){
+//     int a;
+//     printf("Enter the value of number of rows : ");
+//     scanf("%d",&a);
+//     for(int i=1;i<=a;i++){
+//         for(int j=1;j<=a;j++){
+//             if(j==a/2+1 || i==a/2+1) printf("*");
+//             else printf(" ");
+//         }
+//         printf("\n");
+//     }
+// }
+
+// ###Print the Hollow Rectangle
+// #include<stdio.h>
+// int main(){
+//     int a;
+//     printf("Ënter the number of rows : ");
+//     scanf("%d",&a);
+//     int b;
+//     printf("Ënter the number of columns : ");
+//     scanf("%d",&b);
+//     for(int i=1;i<=a;i++){
+//         for(int j=1;j<=b;j++){
+//         if(i==6 || j==4) printf("*");
+//         else printf("#");
+//         }
+//         printf("\n");
+//     }
+// }
+
+// ### Star Cross pattern
+#include<stdio.h>
 int main(){
     int a;
-    printf("Enter the value of number of rows : ");
+    printf("Enter The number of lines : ");
     scanf("%d",&a);
     for(int i=1;i<=a;i++){
         for(int j=1;j<=a;j++){
-            if(j==a/2+1 || i==a/2+1) printf("*");
+            if(i==j || i+j==6) printf("*");
             else printf(" ");
         }
         printf("\n");
-    }
+    }  
 }
