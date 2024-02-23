@@ -324,6 +324,30 @@
 // }
 
 // ###Number Pyramid Mast###
+// #include<stdio.h>
+// int main(){
+//     int a;
+//     printf("Enter the Number of lines u wonna print :");
+//     scanf("%d",&a);
+//     int nsp =a-1;
+//     for(int i=1;i<=a;i++){
+//         for(int c=1;c<=nsp;c++){
+//             printf(" ");
+//         }
+//         nsp--;
+//         for(int j=1;j<=i;j++){
+//             printf("%d",j);
+//         }
+//         for(int k=1;k<=i-1;k++){
+//             printf("%d",k);
+//         }
+        
+//         printf("\n");
+//     }
+// }
+
+
+// ###Alphabetic Pyramid Mast###
 #include<stdio.h>
 int main(){
     int a;
@@ -336,10 +360,12 @@ int main(){
         }
         nsp--;
         for(int j=1;j<=i;j++){
-            printf("%d",j);
+            char ch=(char)(j+64);
+            printf("%c",ch);
         }
         for(int k=1;k<=i-1;k++){
-            printf("%d",k);
+            char ch=(char)(k+64);
+            printf("%c",ch);
         }
         
         printf("\n");
