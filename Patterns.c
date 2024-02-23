@@ -278,9 +278,9 @@
 //     printf("Enter the number of rows : ");
 //     scanf("%d",&x);
 //     for(int i=1;i<=x;i++){
-//         for(int j=1;j<=x-i;j++){
-//             printf(" ");
-//         }
+        // for(int j=1;j<=x-i;j++){
+        //     printf(" ");
+        // }
 //         for(int k=1;k<=4;k++){
 //             printf("*");
 //         }
@@ -296,6 +296,9 @@ int main(){
     printf("Enter the Number of lines u wonna print :");
     scanf("%d",&a);
     for(int i=1;i<=a;i++){
+        for(int j=1;j<=a-i;j++){
+            printf(" ");
+        }
         for(int j=1;j<=2*i-1;j++){
             printf("*");
         }
