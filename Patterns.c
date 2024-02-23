@@ -264,9 +264,9 @@
 //         for(int j=1;j<=x-i;j++){
 //             printf(" ");
 //         }
-//         for(int k=1;k<=i;k++){
-//             printf("*");
-//         }
+// for(int k=1;k<=i;k++){
+//     printf("*");
+// }
 //         printf("\n");
 //     }
 // }
@@ -290,18 +290,58 @@
 
 
 // ### Star Pyramid
+// #include<stdio.h>
+// int main(){
+//     int a;
+//     printf("Enter the Number of lines u wonna print :");
+//     scanf("%d",&a);
+//     for(int i=1;i<=a;i++){
+//         for(int j=1;j<=a-i;j++){
+//             printf(" ");
+//         }
+//         for(int j=1;j<=2*i-1;j++){
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+// }
+
+// ###Number Pyramid###
+// #include<stdio.h>
+// int main(){
+//     int a;
+//     printf("Enter the Number of lines u wonna print :");
+//     scanf("%d",&a);
+//     for(int i=1;i<=a;i++){
+//         for(int j=1;j<=a-i;j++){
+//             printf(" ");
+//         }
+//         for(int j=1;j<=2*i-1;j++){
+//             printf("%d",j);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// ###Number Pyramid Mast###
 #include<stdio.h>
 int main(){
     int a;
     printf("Enter the Number of lines u wonna print :");
     scanf("%d",&a);
+    int nsp =a-1;
     for(int i=1;i<=a;i++){
-        for(int j=1;j<=a-i;j++){
+        for(int c=1;c<=nsp;c++){
             printf(" ");
         }
-        for(int j=1;j<=2*i-1;j++){
-            printf("*");
+        nsp--;
+        for(int j=1;j<=i;j++){
+            printf("%d",j);
         }
+        for(int k=1;k<=i-1;k++){
+            printf("%d",k);
+        }
+        
         printf("\n");
     }
 }
