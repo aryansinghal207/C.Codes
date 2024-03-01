@@ -309,10 +309,10 @@
 // ###Number Pyramid###
 // #include<stdio.h>
 // int main(){
-//     int a;
-//     printf("Enter the Number of lines u wonna print :");
-//     scanf("%d",&a);
-//     for(int i=1;i<=a;i++){
+    // int a;
+    // printf("Enter the Number of lines u wonna print :");
+    // scanf("%d",&a);
+    // for(int i=1;i<=a;i++){
 //         for(int j=1;j<=a-i;j++){
 //             printf(" ");
 //         }
@@ -348,26 +348,57 @@
 
 
 // ###Alphabetic Pyramid Mast###
+// #include<stdio.h>
+// int main(){
+//     int a;
+//     printf("Enter the Number of lines u wonna print :");
+//     scanf("%d",&a);
+//     int nsp =a-1;
+//     for(int i=1;i<=a;i++){
+//         for(int c=1;c<=nsp;c++){
+//             printf(" ");
+//         }
+//         nsp--;
+//         for(int j=1;j<=i;j++){
+//             char ch=(char)(j+64);
+//             printf("%c",ch);
+//         }
+//         for(int k=1;k<=i-1;k++){
+//             char ch=(char)(k+64);
+//             printf("%c",ch);
+//         }
+        
+//         printf("\n");
+//     }
+// }
+
+
+// ### Star Diamond ###
 #include<stdio.h>
 int main(){
     int a;
     printf("Enter the Number of lines u wonna print :");
     scanf("%d",&a);
-    int nsp =a-1;
+    int nsp = a/2;
+    int nst = 1;
+    int ml = a/2 +1;
     for(int i=1;i<=a;i++){
-        for(int c=1;c<=nsp;c++){
+        for(int j=1;j<=nsp;j++){
             printf(" ");
         }
-        nsp--;
-        for(int j=1;j<=i;j++){
-            char ch=(char)(j+64);
-            printf("%c",ch);
+        for(int k=1;k<=nst;k++){
+            printf("*");
         }
-        for(int k=1;k<=i-1;k++){
-            char ch=(char)(k+64);
-            printf("%c",ch);
+        if(i<ml){
+            nsp--;
+            nst+=2;
         }
-        
+        else{
+            nsp++;
+            nsp-=2;
+        }
         printf("\n");
     }
+    return 0;
+    
 }
