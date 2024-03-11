@@ -65,13 +65,23 @@
 
 
 // library Function
-#include <stdio.h>                                                                 
+// #include <stdio.h>                                                                 
+// #include<math.h>
+// int main() {
+//     int a;
+//     printf("Enter the number : ");
+//     scanf("%d",&a);
+//     int root=sqrt(a);
+//     printf("The suare root is %d",root);
+//     return 0;
+// }
+
+
+// library Function
+#include <stdio.h>
 #include<math.h>
 int main() {
-    int a;
-    printf("Enter the number : ");
-    scanf("%d",&a);
-    int root=sqrt(a);
-    printf("The suare root is %d",root);
+    int power=pow(3,3);
+    printf("The answer is %d",power);
     return 0;
 }
