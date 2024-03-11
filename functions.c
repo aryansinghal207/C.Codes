@@ -47,18 +47,31 @@
 
 
 // Sum of 2 numbers using functions
-#include <stdio.h>
-void sum(){
-    int a,b;
-    printf("Enter First Number : ");
-    scanf("%d",&a);
-    printf("Enter Second Number : ");
-    scanf("%d",&b);
-    printf("The Sum of Entered Number is : %d \n",a+b);
-    return;
-}
+// #include <stdio.h>
+// void sum(){
+//     int a,b;
+//     printf("Enter First Number : ");
+//     scanf("%d",&a);
+//     printf("Enter Second Number : ");
+//     scanf("%d",&b);
+//     printf("The Sum of Entered Number is : %d \n",a+b);
+//     return;
+// }
+// int main() {
+//     sum();
+//     sum();
+//     return 0;
+// }
+
+
+// library Function
+#include <stdio.h>                                                                 
+#include<math.h>
 int main() {
-    sum();
-    sum();
+    int a;
+    printf("Enter the number : ");
+    scanf("%d",&a);
+    int root=sqrt(a);
+    printf("The suare root is %d",root);
     return 0;
 }
