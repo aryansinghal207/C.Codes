@@ -78,10 +78,38 @@
 
 
 // library Function
+// #include <stdio.h>
+// #include<math.h>
+// int main() {
+//     int power=pow(3,3);
+//     printf("The answer is %d",power);
+//     return 0;
+// }
+
+
+// Calling Function in function without any proper sequence(Function Prototype)
 #include <stdio.h>
-#include<math.h>
+
+void australia(){
+    printf("You are in Australia \n");
+    void england();
+    england();
+    return;
+}
 int main() {
-    int power=pow(3,3);
-    printf("The answer is %d",power);
+    void india();
+    india();
     return 0;
+}
+
+void india(){
+    printf("You are in India \n");
+    void australaia();
+    australia();
+    return;
+}
+
+void england(){
+    printf("You are in England \n");
+    return;
 }
