@@ -103,15 +103,4 @@
 // ###(a) WIthout using third variable
 // ###(b) By using temporary variable.
 // ###(c) Without using temporary variable 
-#include<stdio.h>
-int main(){
-    int a;
-    printf("Enter the value of a:");
-    scanf("%d",&a);
-    int b;
-    printf("Enter the value of b:");
-    scanf("%d",&b);
-    printf("After Swapping the variables a is: %d\n",b);
-    printf("After Swapping the variables b is: %d",a);
-    return 0;
-}
+
