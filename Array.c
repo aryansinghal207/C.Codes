@@ -67,16 +67,36 @@
 // }
 
 
+// ### To print all the even and odd element of array..
+// #include<stdio.h>
+// int main(){
+//     int arr[10]={1,2,3,4,5,6,7,8,9,10};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     for(int i=0;i< size;i+=2){
+//         printf("%d \n",arr[i]);
+//     }
+//     printf("\n");
+//     for(int j=1;j< size;j+=2){
+//         printf("%d \n",arr[j]);
+//     }
+//     return 0;
+// }
+
+
+// Multiply odd element of array with 2 and add 10 to even elements of array..
 #include<stdio.h>
 int main(){
     int arr[10]={1,2,3,4,5,6,7,8,9,10};
-    int size = sizeof(arr)/sizeof(arr[0]);
-    for(int i=0;i< size;i+=2){
-        printf("%d \n",arr[i]);
+    for(int i=0;i<9;i++){
+        if(i%2==0){
+            arr[i]*=2;
+        }
+        else{
+            arr[i]+=10;
+        }
     }
-    printf("\n");
-    for(int j=1;j< size;j+=2){
-        printf("%d \n",arr[j]);
+    for(int i=0;i<=9;i++){
+        printf(" %d ",arr[i]);
     }
     return 0;
 }
