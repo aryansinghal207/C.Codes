@@ -52,14 +52,31 @@
 //     return 0;
 // }
 
+
+// #include<stdio.h>
+// void fun(int a[]){
+//     a[0]=1;
+//     return;
+// }
+// int main(){
+//     int arr[5]={6,2,3,4,5};
+//     printf("%d \n",arr[0]);
+//     fun(arr);
+//     printf("%d",arr[0]);
+//     return 0;
+// }
+
+
 #include<stdio.h>
 int main(){
-    int arr[5]={1,2,3,4,5,9};
-    int a=-1;
-    for(int i=0;i<=5;i++){
-        if(a<arr[i]){
-            i=arr[i];
-        }
-        printf("%d",a);
+    int arr[10]={1,2,3,4,5,6,7,8,9,10};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i< size;i+=2){
+        printf("%d \n",arr[i]);
     }
+    printf("\n");
+    for(int j=1;j< size;j+=2){
+        printf("%d \n",arr[j]);
+    }
+    return 0;
 }
