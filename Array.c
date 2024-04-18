@@ -103,19 +103,40 @@
 
 
 // Difference of sum of even index to the sum of odd index
+// #include<stdio.h>
+// int main(){
+//     int arr[7]={1,2,3,4,5,6,7};
+//     int sumeven=0;
+//     int sumodd=0;
+//     for(int i=0;i<=6;i++){
+//         if(i%2==0){
+//             sumeven += arr[i];
+//         }
+//         else{
+//             sumodd +=arr[i];
+//         }
+//     }
+//     printf("%d",sumeven-sumodd);
+//     return 0;
+// }
+
+
+// ##Find the total number of pairs in the array whose sum is equal to the given value x.
 #include<stdio.h>
 int main(){
-    int arr[7]={1,2,3,4,5,6,7};
-    int sumeven=0;
-    int sumodd=0;
-    for(int i=0;i<=6;i++){
-        if(i%2==0){
-            sumeven += arr[i];
-        }
-        else{
-            sumodd +=arr[i];
+    int arr[8]={1,2,3,4,5,6,7,8};
+    int a;
+    printf("Enter a value : ");
+    scanf("%d",&a);
+    int count=0;
+    for(int i=0;i<=7;i++){
+        for(int j=i+1;j<=7;j++){
+            if(arr[i]+arr[j]==a){
+                count++;
+                printf("(%d,%d) \n",arr[i],arr[j]);
+            }
         }
     }
-    printf("%d",sumeven-sumodd);
+    printf("%d",count);
     return 0;
 }
