@@ -84,19 +84,38 @@
 
 
 // Multiply odd element of array with 2 and add 10 to even elements of array..
+// #include<stdio.h>
+// int main(){
+//     int arr[10]={1,2,3,4,5,6,7,8,9,10};
+//     for(int i=0;i<9;i++){
+//         if(i%2==0){
+//             arr[i]*=2;
+//         }
+//         else{
+//             arr[i]+=10;
+//         }
+//     }
+//     for(int i=0;i<=9;i++){
+//         printf(" %d ",arr[i]);
+//     }
+//     return 0;
+// }
+
+
+// Difference of sum of even index to the sum of odd index
 #include<stdio.h>
 int main(){
-    int arr[10]={1,2,3,4,5,6,7,8,9,10};
-    for(int i=0;i<9;i++){
+    int arr[7]={1,2,3,4,5,6,7};
+    int sumeven=0;
+    int sumodd=0;
+    for(int i=0;i<=6;i++){
         if(i%2==0){
-            arr[i]*=2;
+            sumeven += arr[i];
         }
         else{
-            arr[i]+=10;
+            sumodd +=arr[i];
         }
     }
-    for(int i=0;i<=9;i++){
-        printf(" %d ",arr[i]);
-    }
+    printf("%d",sumeven-sumodd);
     return 0;
 }
