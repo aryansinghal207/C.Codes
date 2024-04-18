@@ -122,6 +122,26 @@
 
 
 // ##Find the total number of pairs in the array whose sum is equal to the given value a.
+// #include<stdio.h>
+// int main(){
+//     int arr[8]={1,2,3,4,5,6,7,8};
+//     int a;
+//     printf("Enter a value : ");
+//     scanf("%d",&a);
+//     int count=0;
+//     for(int i=0;i<=7;i++){
+//         for(int j=i+1;j<=7;j++){
+//             if(arr[i]+arr[j]==a){
+//                 count++;
+//                 printf("(%d,%d) \n",arr[i],arr[j]);
+//             }
+//         }
+//     }
+//     printf("%d",count);
+//     return 0;
+// }
+
+// ##Find the total number of triplet pairs in the array whose sum is equal to the given value a.
 #include<stdio.h>
 int main(){
     int arr[8]={1,2,3,4,5,6,7,8};
@@ -131,14 +151,14 @@ int main(){
     int count=0;
     for(int i=0;i<=7;i++){
         for(int j=i+1;j<=7;j++){
-            if(arr[i]+arr[j]==a){
-                count++;
-                printf("(%d,%d) \n",arr[i],arr[j]);
+            for(int z=j+1;z<=7;z++){
+                if(arr[i]+arr[j]+arr[z]==a){
+                    count++;
+                    printf("(%d,%d,%d) \n",arr[i],arr[j],arr[z]);
+                }
             }
         }
     }
     printf("%d",count);
     return 0;
 }
-
-// ##Find the total number of triplet pairs in the array whose sum is equal to the given value a.
