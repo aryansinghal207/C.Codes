@@ -121,7 +121,7 @@
 // }
 
 
-// ##Find the total number of pairs in the array whose sum is equal to the given value x.
+// ##Find the total number of pairs in the array whose sum is equal to the given value a.
 #include<stdio.h>
 int main(){
     int arr[8]={1,2,3,4,5,6,7,8};
@@ -140,3 +140,5 @@ int main(){
     printf("%d",count);
     return 0;
 }
+
+// ##Find the total number of triplet pairs in the array whose sum is equal to the given value a.
