@@ -142,23 +142,60 @@
 // }
 
 // ##Find the total number of triplet pairs in the array whose sum is equal to the given value a.
-#include<stdio.h>
-int main(){
-    int arr[8]={1,2,3,4,5,6,7,8};
-    int a;
-    printf("Enter a value : ");
-    scanf("%d",&a);
-    int count=0;
-    for(int i=0;i<=7;i++){
-        for(int j=i+1;j<=7;j++){
-            for(int z=j+1;z<=7;z++){
-                if(arr[i]+arr[j]+arr[z]==a){
-                    count++;
-                    printf("(%d,%d,%d) \n",arr[i],arr[j],arr[z]);
-                }
-            }
-        }
+// #include<stdio.h>
+// int main(){
+//     int arr[8]={1,2,3,4,5,6,7,8};
+//     int a;
+//     printf("Enter a value : ");
+//     scanf("%d",&a);
+//     int count=0;
+//     for(int i=0;i<=7;i++){
+//         for(int j=i+1;j<=7;j++){
+//             for(int z=j+1;z<=7;z++){
+//                 if(arr[i]+arr[j]+arr[z]==a){
+//                     count++;
+//                     printf("(%d,%d,%d) \n",arr[i],arr[j],arr[z]);
+//                 }
+//             }
+//         }
+//     }
+//     printf("%d",count);
+//     return 0;
+// }
+
+// ##Find the second largest element in the array.
+#include <stdio.h>
+#include <limits.h>
+
+int main() {
+    int arr[] = {10, 20, 4, 45, 6, 89, 7};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int i, first, second;
+
+    /* There should be atleast two elements */
+    if (n < 2) {
+        printf(" Invalid Input ");
+        return 0;
     }
-    printf("%d",count);
+
+    first = second = INT_MIN;
+    for (i = 0; i < n ; i ++) {
+        /* If current element is greater than first then update both
+          first and second */
+        if (arr[i] > first) {
+            second = first;
+            first = arr[i];
+        }
+
+        /* If arr[i] is in between first and second then update second  */
+        else if (arr[i] > second && arr[i] < first)
+            second = arr[i];
+    }
+
+    if (second == INT_MIN)
+        printf("There is no second largest element\n");
+    else
+        printf("The second largest element is %d\n", second);
+
     return 0;
 }
