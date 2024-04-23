@@ -164,38 +164,50 @@
 // }
 
 // ##Find the second largest element in the array.
-#include <stdio.h>
-#include <limits.h>
+// #include <stdio.h>
+// #include <limits.h>
 
-int main() {
-    int arr[] = {10, 20, 4, 45, 6, 89, 7};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    int i, first, second;
+// int main() {
+//     int arr[] = {10, 20, 4, 45, 6, 89, 7};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int i, first, second;
 
-    /* There should be atleast two elements */
-    if (n < 2) {
-        printf(" Invalid Input ");
-        return 0;
+//     /* There should be atleast two elements */
+//     if (n < 2) {
+//         printf(" Invalid Input ");
+//         return 0;
+//     }
+
+//     first = second = INT_MIN;
+//     for (i = 0; i < n ; i ++) {
+//         /* If current element is greater than first then update both
+//           first and second */
+//         if (arr[i] > first) {
+//             second = first;
+//             first = arr[i];
+//         }
+
+//         /* If arr[i] is in between first and second then update second  */
+//         else if (arr[i] > second && arr[i] < first)
+//             second = arr[i];
+//     }
+
+//     if (second == INT_MIN)
+//         printf("There is no second largest element\n");
+//     else
+//         printf("The second largest element is %d\n", second);
+
+//     return 0;
+// }
+
+// WAP to copy a array into another array in reverse order.
+#include<stdio.h>
+int main(){
+    int arr[5]={1,2,3,4,5};
+    int arr2[5];
+    for(int i=0;i<=4;i++){
+        arr2[i]=arr[4-i];
+        printf("%d ",arr2[i]);
     }
-
-    first = second = INT_MIN;
-    for (i = 0; i < n ; i ++) {
-        /* If current element is greater than first then update both
-          first and second */
-        if (arr[i] > first) {
-            second = first;
-            first = arr[i];
-        }
-
-        /* If arr[i] is in between first and second then update second  */
-        else if (arr[i] > second && arr[i] < first)
-            second = arr[i];
-    }
-
-    if (second == INT_MIN)
-        printf("There is no second largest element\n");
-    else
-        printf("The second largest element is %d\n", second);
-
     return 0;
 }
