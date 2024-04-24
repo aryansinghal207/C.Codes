@@ -84,24 +84,45 @@
 //     printf("Min element is %d\n",min);
 // }
 
-// 
+// WAP to find the maximum element in the matrix and print the maximum element.
+// #include<stdio.h>
+// int main(){
+//     int arr[2][3]={{1,5,3},{3,7,3}};
+//     int maxelement=0;
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<3;j++){
+//             if(arr[i][j]>maxelement){
+//                 maxelement=arr[i][j];
+//             }
+//         }
+//     }
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<3;j++){
+//             if(arr[i][j]>maxelement){
+//                 printf("%d ",arr[i][j]);
+//             }
+//         }
+//     }
+//     printf("The Maximum element is %d",maxelement);
+// }
+
+
+// #WAP to find the row having the maximum sum in a matrix.
 #include<stdio.h>
 int main(){
-    int arr[2][3]={{1,5,3},{3,7,3}};
-    int maxelement=0;
+    int arr[2][3]={{10,6,3},{7,3,6}};
+    int maxSum=0;
+    int maxRow=0;
     for(int i=0;i<2;i++){
+        int sum=0;
         for(int j=0;j<3;j++){
-            if(arr[i][j]>maxelement){
-                maxelement=arr[i][j];
-            }
+            sum+=arr[i][j];
+        }
+        if(sum>maxSum){
+            maxSum=sum;
+            maxRow=i;
         }
     }
-    for(int i=0;i<2;i++){
-        for(int j=0;j<3;j++){
-            if(arr[i][j]>maxelement){
-                printf("%d ",arr[i][j]);
-            }
-        }
-    }
-    printf("The Maximum element is %d",maxelement);
+    printf("Row %d has the maximum sum of %d",maxRow,maxSum);
+    return 0;
 }
