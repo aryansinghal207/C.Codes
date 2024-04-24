@@ -80,25 +80,28 @@
 //             }
 //         }
 //     }
-//     printf("Max: %d\nMin: %d",max,min);
-//     return 0;
+//     printf("Max element is %d\n",max);
+//     printf("Min element is %d\n",min);
 // }
 
+// 
 #include<stdio.h>
 int main(){
-    int arr[2][2]={{1,2},{3,4}};
-    int max=arr[0][0];
-    int min=arr[0][0];
+    int arr[2][3]={{1,5,3},{3,7,3}};
+    int maxelement=0;
     for(int i=0;i<2;i++){
-        for(int j=0;j<2;j++){
-            if(arr[i][j]>max){
-                max=arr[i][j];
-            }
-            if(arr[i][j]<min){
-                min=arr[i][j];
+        for(int j=0;j<3;j++){
+            if(arr[i][j]>maxelement){
+                maxelement=arr[i][j];
             }
         }
     }
-    printf("Max element is %d\n",max);
-    printf("Min element is %d\n",min);
+    for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++){
+            if(arr[i][j]>maxelement){
+                printf("%d ",arr[i][j]);
+            }
+        }
+    }
+    printf("The Maximum element is %d",maxelement);
 }
