@@ -165,6 +165,31 @@
 
 
 // Make a transpose of a matrix by taking inputs from user
+// #include<stdio.h>
+// int main(){
+//     int arr[2][2];
+//     int arr1[2][2];
+//     printf("Enter the elements of the matrix \n");
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<2;j++){
+//             printf("Enter the element at position %d,%d : ",i,j);
+//             scanf("%d",&arr[i][j]);
+//         }
+//     }
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<2;j++){
+//             arr1[i][j]=arr[j][i];
+//         }
+//     }
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<2;j++){
+//             printf("%d ",arr1[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
 #include<stdio.h>
 int main(){
     int arr[2][2];
@@ -172,7 +197,7 @@ int main(){
     printf("Enter the elements of the matrix \n");
     for(int i=0;i<2;i++){
         for(int j=0;j<2;j++){
-            printf("Enter the element at position %d,%d : ",i,j);
+            printf("Enter the element of position %d,%d : ",i,j);
             scanf("%d",&arr[i][j]);
         }
     }
