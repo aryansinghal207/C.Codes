@@ -108,21 +108,84 @@
 
 
 // #WAP to find the row having the maximum sum in a matrix.
+// #include<stdio.h>
+// int main(){
+//     int arr[2][3]={{10,6,3},{7,3,6}};
+//     int maxSum=0;
+//     int maxRow=0;
+//     for(int i=0;i<2;i++){
+//         int sum=0;
+//         for(int j=0;j<3;j++){
+//             sum+=arr[i][j];
+//         }
+//         if(sum>maxSum){
+//             maxSum=sum;
+//             maxRow=i;
+//         }
+//     }
+//     printf("Row %d has the maximum sum of %d",maxRow,maxSum);
+//     return 0;
+// }
+
+// WAP to find the sum of element that matches the input value by user
+// #include<stdio.h>
+// int main(){
+//     int arr[2][3]={{1,2,3},{4,5,6}};
+//     int sum=0;
+//     int n;
+//     printf("Enter the number you want to find : ");
+//     scanf("%d",&n);
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<3;j++){
+//             if(arr[i][j]==n){
+//                 sum+=arr[i][j];
+//             }
+//         }
+//     }
+//     printf("The sum of the element is %d",sum);
+//     return 0;
+// }
+
+
+
+// #include <stdio.h>
+// int main() {
+//     int arr[5];
+//     int i;
+//     printf("Enter elements of array:\n");
+//     for(i = 0; i < 5; i++) {
+//         printf("Enter element at position %d: ", i);
+//         scanf("%d", &arr[i]);
+//     }
+//     printf("Array elements are:\n");
+//     for(i = 0; i < 5; i++) {
+//         printf("%d ", arr[i]);
+//     }
+// }
+
+
+// Make a transpose of a matrix by taking inputs from user
 #include<stdio.h>
 int main(){
-    int arr[2][3]={{10,6,3},{7,3,6}};
-    int maxSum=0;
-    int maxRow=0;
+    int arr[2][2];
+    int arr1[2][2];
+    printf("Enter the elements of the matrix \n");
     for(int i=0;i<2;i++){
-        int sum=0;
-        for(int j=0;j<3;j++){
-            sum+=arr[i][j];
-        }
-        if(sum>maxSum){
-            maxSum=sum;
-            maxRow=i;
+        for(int j=0;j<2;j++){
+            printf("Enter the element at position %d,%d : ",i,j);
+            scanf("%d",&arr[i][j]);
         }
     }
-    printf("Row %d has the maximum sum of %d",maxRow,maxSum);
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            arr1[i][j]=arr[j][i];
+        }
+    }
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            printf("%d ",arr1[i][j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
