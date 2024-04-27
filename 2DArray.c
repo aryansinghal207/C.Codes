@@ -165,6 +165,38 @@
 
 
 // Make a transpose of a matrix by taking inputs from user
+// #include<stdio.h>
+// int main(){
+//     int a;
+//     printf("Enter the size of rows : ");
+//     scanf("%d",&a);
+//     int b;
+//     printf("Enter the size of columns : ");
+//     scanf("%d",&b);
+//     int arr[a][b];
+//     int arr1[a][b];
+//     printf("Enter the elements of the matrix \n");
+//     for(int i=0;i<a;i++){
+//         for(int j=0;j<b;j++){
+//             printf("Enter the element at position %d,%d : ",i,j);
+//             scanf("%d",&arr[i][j]);
+//         }
+//     }
+//     for(int i=0;i<a;i++){
+//         for(int j=0;j<b;j++){
+//             arr1[i][j]=arr[j][i];
+//         }
+//     }
+//     for(int i=0;i<a;i++){
+//         for(int j=0;j<b;j++){
+//             printf("%d ",arr1[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+//Rotate a matrix by 90 degree Cloclwise
 #include<stdio.h>
 int main(){
     int a;
@@ -184,7 +216,7 @@ int main(){
     }
     for(int i=0;i<a;i++){
         for(int j=0;j<b;j++){
-            arr1[i][j]=arr[j][i];
+            arr1[j][a-1-i]=arr[i][j];
         }
     }
     for(int i=0;i<a;i++){
@@ -195,5 +227,3 @@ int main(){
     }
     return 0;
 }
-
-// WAP 
