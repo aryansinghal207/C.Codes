@@ -48,6 +48,23 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// struct height {
+//     int feet;
+//     float inches;
+// };
+// int main() {
+//     struct height height1;
+//     printf("Enter height in feets : ");
+//     scanf("%d", &height1.feet);
+//     printf("Enter height in inches: ");
+//     scanf("%f", &height1.inches);
+//     printf("\nHeight of individual:\n");
+//     printf("The Height is %d feet and %.1f inches",height1.feet,height1.inches);
+//     return 0;
+// }
+
+
 #include <stdio.h>
 struct height {
     int feet;
@@ -59,9 +76,15 @@ int main() {
     scanf("%d", &height1.feet);
     printf("Enter height in inches: ");
     scanf("%f", &height1.inches);
-    printf("\nHeight of individual:\n");
-    printf("The Height is %d feet and %.1f inches",height1.feet,height1.inches);
+    if(height1.inches >= 12){
+        height1.feet=height1.feet+1;
+        height1.inches=height1.inches-12;
+        printf("\nDetails of individual:\n");
+        printf("The Height is %d feet and %.1f inches",height1.feet,height1.inches);
+    }
+    else{
+        printf("\nDetails of individual:\n");
+        printf("The Height is %d feet and %.1f inches",height1.feet,height1.inches);
+    }
     return 0;
 }
-
-
