@@ -1,9 +1,20 @@
+// #include<stdio.h>
+// int main(){
+//     char arr[]={'a','r','y','a','n','\0'};
+//     int i=0;
+//     while(arr[i]!='\0'){
+//         printf("%c ",arr[i]);
+//         i++;
+//     }
+//     return 0;
+// }
+
 #include<stdio.h>
 int main(){
-    char arr[]={'a','r','y','a','n','\0'};
+    char arr[]="Aryan Singhal";
     int i=0;
-    while(arr[i]!='\0'){
-        printf("%c ",arr[i]);
+    while(i<13){
+        printf("%c",arr[i]);
         i++;
     }
     return 0;
