@@ -61,12 +61,64 @@
 // }
 
 // WAP to print reverse of string using puts and gets
+// #include<stdio.h>
+// #include<string.h>
+// int main(){
+//     char str[40];
+//     gets(str);
+//     strrev(str);
+//     puts(str);
+//     return 0;
+// }
+
+// WAP to swap two  strings using puts and gets
+// #include<stdio.h>
+// #include<string.h>
+// int main(){
+//     char str1[40],str2[40],temp[40];
+//     gets(str1);
+//     gets(str2);
+//     printf("Before swapping\n");
+//     puts(str1);
+//     puts(str2);
+//     strcpy(temp,str1);
+//     strcpy(str1,str2);
+//     strcpy(str2,temp);
+//     printf("After swapping\n");
+//     puts(str1);
+//     puts(str2);
+//     return 0;
+// }
+
+// WAP to swap two  strings without using string header file
 #include<stdio.h>
-#include<string.h>
 int main(){
-    char str[40];
-    gets(str);
-    strrev(str);
-    puts(str);
+    char str1[40],str2[40],temp[40];
+    gets(str1);
+    gets(str2);
+    printf("Before swapping\n");
+    puts(str1);
+    puts(str2);
+    int i=0;
+    while(str1[i]!='\0'){
+        temp[i]=str1[i];
+        i++;
+    }
+    temp[i]='\0';
+    i=0;
+    while(str1[i]!='\0'){
+        str1[i]=str2[i];
+        i++;
+    }
+    str1[i]='\0';
+    i=0;
+    while(str1[i]!='\0'){
+        str2[i]=temp[i];
+        i++;
+    }
+    str2[i]='\0';
+    printf("After swapping\n");
+    puts(str1);
+    puts(str2);
     return 0;
 }
