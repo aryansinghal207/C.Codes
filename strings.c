@@ -51,11 +51,22 @@
 //     return 0;
 // }
 
+// #include<stdio.h>
+// #include<string.h>
+// int main(){
+//     char str[40];
+//     gets(str);
+//     printf("Your input was : %s",str);
+//     return 0;
+// }
+
+// WAP to print reverse of string using puts and gets
 #include<stdio.h>
 #include<string.h>
 int main(){
     char str[40];
     gets(str);
-    printf("Your input was : %s",str);
+    strrev(str);
+    puts(str);
     return 0;
 }
