@@ -91,34 +91,47 @@
 // }
 
 // WAP to swap two  strings without using string header file
+// #include<stdio.h>
+// int main(){
+//     char str1[40],str2[40],temp[40];
+//     gets(str1);
+//     gets(str2);
+//     printf("Before swapping\n");
+//     puts(str1);
+//     puts(str2);
+//     int i=0;
+//     while(str1[i]!='\0'){
+//         temp[i]=str1[i];
+//         i++;
+//     }
+//     temp[i]='\0';
+//     i=0;
+//     while(str1[i]!='\0'){
+//         str1[i]=str2[i];
+//         i++;
+//     }
+//     str1[i]='\0';
+//     i=0;
+//     while(str1[i]!='\0'){
+//         str2[i]=temp[i];
+//         i++;
+//     }
+//     str2[i]='\0';
+//     printf("After swapping\n");
+//     puts(str1);
+//     puts(str2);
+//     return 0;
+// }
+
+
+// WAP to find the length of the string using strlen
 #include<stdio.h>
+#include<string.h>
 int main(){
-    char str1[40],str2[40],temp[40];
-    gets(str1);
-    gets(str2);
-    printf("Before swapping\n");
-    puts(str1);
-    puts(str2);
-    int i=0;
-    while(str1[i]!='\0'){
-        temp[i]=str1[i];
-        i++;
-    }
-    temp[i]='\0';
-    i=0;
-    while(str1[i]!='\0'){
-        str1[i]=str2[i];
-        i++;
-    }
-    str1[i]='\0';
-    i=0;
-    while(str1[i]!='\0'){
-        str2[i]=temp[i];
-        i++;
-    }
-    str2[i]='\0';
-    printf("After swapping\n");
-    puts(str1);
-    puts(str2);
+    char str[40];
+    gets(str);
+    printf("Length of the string is %d",strlen(str));
     return 0;
 }
+
+
