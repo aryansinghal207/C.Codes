@@ -229,44 +229,45 @@
 // }
 
 // Matrix Multiplication
-#include<stdio.h>
-int main(){
-    int a;
-    printf("Enter the size of rows : ");
-    scanf("%d",&a);
-    int b;
-    printf("Enter the size of columns : ");
-    scanf("%d",&b);
-    int arr[a][b];
-    int arr1[a][b];
-    int arr2[a][b];
-    printf("Enter the elements of the matrix \n");
-    for(int i=0;i<a;i++){
-        for(int j=0;j<b;j++){
-            printf("Enter the element at position %d,%d : ",i,j);
-            scanf("%d",&arr[i][j]);
-        }
-    }
-    printf("Enter the elements of the 2nd matrix \n");
-    for(int i=0;i<a;i++){
-        for(int j=0;j<b;j++){
-            printf("Enter the element at position %d,%d : ",i,j);
-            scanf("%d",&arr1[i][j]);
-        }
-    }
-    for(int i=0;i<a;i++){
-        for(int j=0;j<b;j++){
-            arr2[i][j]=0;
-            for(int k=0;k<a;k++){
-                arr2[i][j]+=arr[i][k]*arr1[k][j];
-            }
-        }
-    }
-    for(int i=0;i<a;i++){
-        for(int j=0;j<b;j++){
-            printf("%d ",arr2[i][j]);
-        }
-        printf("\n");
-    }
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int a;
+//     printf("Enter the size of rows : ");
+//     scanf("%d",&a);
+//     int b;
+//     printf("Enter the size of columns : ");
+//     scanf("%d",&b);
+//     int arr[a][b];
+//     int arr1[a][b];
+//     int arr2[a][b];
+//     printf("Enter the elements of the matrix \n");
+//     for(int i=0;i<a;i++){
+//         for(int j=0;j<b;j++){
+//             printf("Enter the element at position %d,%d : ",i,j);
+//             scanf("%d",&arr[i][j]);
+//         }
+//     }
+//     printf("Enter the elements of the 2nd matrix \n");
+//     for(int i=0;i<a;i++){
+//         for(int j=0;j<b;j++){
+//             printf("Enter the element at position %d,%d : ",i,j);
+//             scanf("%d",&arr1[i][j]);
+//         }
+//     }
+//     for(int i=0;i<a;i++){
+//         for(int j=0;j<b;j++){
+//             arr2[i][j]=0;
+//             for(int k=0;k<a;k++){
+//                 arr2[i][j]+=arr[i][k]*arr1[k][j];
+//             }
+//         }
+//     }
+//     for(int i=0;i<a;i++){
+//         for(int j=0;j<b;j++){
+//             printf("%d ",arr2[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
