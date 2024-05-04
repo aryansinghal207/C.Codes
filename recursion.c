@@ -17,12 +17,16 @@
 
 // WAP to print something several times using recursion
 #include<stdio.h>
-int call(int n){
+void call(int n){
+    if(n==0) return;
     printf("Good Morning\n");
+    call(n-1); 
+    return; 
 }
-void main(){
-    int n=5;
-    for(int i=0;i<n;i++){
-        call(n);
-    }    
+int main(){
+    int n;
+    printf("Enter number of times u want to print : ");
+    scanf("%d",&n);
+    call(n);  
+    return 0;
 }
