@@ -66,18 +66,35 @@
 // }
 
 // WAP to calculate factorail using recursion
+// #include<stdio.h>
+// int fibo(int n){
+//     if(n==0 || n==1 || n==2) return 1;
+//     int a1=fibo(n-1);
+//     int a2=fibo(n-2);
+//     return a1+a2;
+// }
+// int main(){
+//     int n;
+//     printf("Enter the number : ");
+//     scanf("%d",&n);
+//     int x=fibo(n);
+//     printf("The Factorial of %d is %d",n,x);
+//     return 0;
+// }
+
+
+// WAP to print stair path
 #include<stdio.h>
-int fibo(int n){
-    if(n==0 || n==1 || n==2) return 1;
-    int a1=fibo(n-1);
-    int a2=fibo(n-2);
-    return a1+a2;
+int stair(int n){
+    if(n<=2) return n;
+    int totalways=stair(n-1)+stair(n-2);
+    return totalways;
 }
 int main(){
     int n;
-    printf("Enter the number : ");
+    printf("Enter the number of stairs : ");
     scanf("%d",&n);
-    int x=fibo(n);
-    printf("The Factorial of %d is %d",n,x);
+    int x=stair(n);
+    printf("The total ways to reach the top is %d",x);
     return 0;
 }
