@@ -21,19 +21,39 @@
 
 
 // WAP of structure
+// #include <stdio.h>
+// int main(){
+//     struct friends{
+//         int age;
+//         int marks;
+//         char name;
+//     };
+//     struct friends f1;
+//     f1.age = 20;
+//     f1.marks= 100;
+//     f1.name = 'A';
+//     printf("Age: %d\n", f1.age);
+//     printf("Marks: %d\n", f1.marks);
+//     printf("Name: %c\n", f1.name);
+//     return 0;
+// } 
+
+
+// WAP of structure of a book
 #include <stdio.h>
+#include <string.h>
 int main(){
-    struct friends{
-        int age;
-        int marks;
-        char name;
-    };
-    struct friends f1;
-    f1.age = 20;
-    f1.marks= 100;
-    f1.name = 'A';
-    printf("Age: %d\n", f1.age);
-    printf("Marks: %d\n", f1.marks);
-    printf("Name: %c\n", f1.name);
-    return 0;
-} 
+    struct book{
+        char title[50];
+        int noofpages;
+        int price;
+    }a,b,c;
+
+    a.noofpages=100;
+    a.price=200;
+    strcpy(a.title, "The throns");
+    printf("Title: %s\n", a.title);
+    printf("No of pages: %d\n", a.noofpages);
+    printf("Price: %d\n", a.price);
+    
+}
