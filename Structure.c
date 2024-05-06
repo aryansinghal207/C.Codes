@@ -40,20 +40,38 @@
 
 
 // WAP of structure of a book
+// #include <stdio.h>
+// #include <string.h>
+// int main(){
+//     struct book{
+//         char title[50];
+//         int noofpages;
+//         int price;
+//     }a,b,c;
+
+//     a.noofpages=100;
+//     a.price=200;
+//     strcpy(a.title, "The throns");
+//     printf("Title: %s\n", a.title);
+//     printf("No of pages: %d\n", a.noofpages);
+//     printf("Price: %d\n", a.price);
+// }
+
+
+// typedef in structure
 #include <stdio.h>
 #include <string.h>
 int main(){
-    struct book{
+    typedef struct book{
         char title[50];
         int noofpages;
         int price;
-    }a,b,c;
-
+    }b;
+    b a;
     a.noofpages=100;
     a.price=200;
     strcpy(a.title, "The throns");
     printf("Title: %s\n", a.title);
     printf("No of pages: %d\n", a.noofpages);
     printf("Price: %d\n", a.price);
-    
 }
