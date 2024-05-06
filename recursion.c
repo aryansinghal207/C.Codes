@@ -84,17 +84,36 @@
 
 
 // WAP to print stair path
+// #include<stdio.h>
+// int stair(int n){
+//     if(n<=2) return n;
+//     int totalways=stair(n-1)+stair(n-2);
+//     return totalways;
+// }
+// int main(){
+//     int n;
+//     printf("Enter the number of stairs : ");
+//     scanf("%d",&n);
+//     int x=stair(n);
+//     printf("The total ways to reach the top is %d",x);
+//     return 0;
+// }
+
+// WAP To print logarithmic power function
 #include<stdio.h>
-int stair(int n){
-    if(n<=2) return n;
-    int totalways=stair(n-1)+stair(n-2);
-    return totalways;
+int power(int a,int b){
+    if(b==0) return 1;
+    int x=power(a,b/2);
+    if(b%2==0) return x*x;
+    else return x*x*a;
 }
 int main(){
-    int n;
-    printf("Enter the number of stairs : ");
-    scanf("%d",&n);
-    int x=stair(n);
-    printf("The total ways to reach the top is %d",x);
+    int a,b;
+    printf("Enter the number : ");
+    scanf("%d",&a);
+    printf("Enter the power : ");
+    scanf("%d",&b);
+    int x=power(a,b);
+    printf("The result is %d",x);
     return 0;
 }
