@@ -244,13 +244,22 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int main() {
+//     char str[]="Hello Aryan this side. \0";
+//     int i=0;
+//     while(str[i]!='\0'){
+//         printf("%c",str[i]);
+//         i++;
+//     }
+//     return 0;
+// }
+
 #include <stdio.h>
+#include<string.h>
 int main() {
-    char str[22]="Hello Aryan this side.";
-    int i=0;
-    while(i<=22){
-        printf("%c",str[i]);
-        i++;
-    }
+    char str[100];
+    scanf("%[^\n]s",str);
+    printf("Your input is : %s",str);
     return 0;
 }
