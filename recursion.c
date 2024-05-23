@@ -1,4 +1,4 @@
-// WAP to print factoraila of any numebr using recursion
+// WAP to print factoraila of any number using recursion
 // #include<stdio.h>
 // int factorial(int n){
 //     if(n==1 || n==0){
