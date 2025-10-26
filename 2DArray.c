@@ -64,26 +64,6 @@
 //     }
 // }
 
-// WAP to calculate the maximum and minimum 
-// #include<stdio.h>
-// int main(){
-//     int arr[2][2]={{1,2},{3,4}};
-//     int max=arr[0][0];
-//     int min=arr[0][0];
-//     for(int i=0;i<2;i++){
-//         for(int j=0;j<2;j++){
-//             if(arr[i][j]>max){
-//                 max=arr[i][j];
-//             }
-//             if(arr[i][j]<min){
-//                 min=arr[i][j];
-//             }
-//         }
-//     }
-//     printf("Max element is %d\n",max);
-//     printf("Min element is %d\n",min);
-// }
-
 // WAP to find the maximum element in the matrix and print the maximum element.
 // #include<stdio.h>
 // int main(){
@@ -104,6 +84,26 @@
 //         }
 //     }
 //     printf("The Maximum element is %d",maxelement);
+// }
+
+// WAP to calculate the maximum and minimum 
+// #include<stdio.h>
+// int main(){
+//     int arr[2][2]={{1,2},{3,4}};
+//     int max=arr[0][0];
+//     int min=arr[0][0];
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<2;j++){
+//             if(arr[i][j]>max){
+//                 max=arr[i][j];
+//             }
+//             if(arr[i][j]<min){
+//                 min=arr[i][j];
+//             }
+//         }
+//     }
+//     printf("Max element is %d\n",max);
+//     printf("Min element is %d\n",min);
 // }
 
 
